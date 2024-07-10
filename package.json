@@ -1,0 +1,19 @@
+{
+  "name": "my-monorepo",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm:start-app1\" \"npm:start-app2\"",
+    "start-app1": "npm --workspace=packages/app1 start",
+    "start-app2": "npm --workspace=packages/app2 start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
